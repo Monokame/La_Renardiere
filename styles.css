@@ -59,23 +59,32 @@ header nav ul li {
 
 section {
     display: none;
-    height: 60%;
-    width: 60%;
-    padding: 10px;
+    height: max-content;
+    width: 50%;
     margin: auto;
     margin-top: 50px;
 }
 
 section::before {
+    position: absolute;
     content: '';
+    height: 75%;
+    width: 50%;
     background-color: #000;
     filter: blur(28px);
     opacity: 0.8;
-    position: absolute;
     z-index: -1;
-    height: 60%;
-    width: 60%;
-    padding: 10px;
+}
+
+.section::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 50%;
+    background-color: #000;
+    filter: blur(28px);
+    opacity: 0.8;
+    z-index: -1;
 }
 
 form {
@@ -86,7 +95,11 @@ form {
     display: block;
 }
 
-.input{
+input {
+    cursor: text;
+}
+
+.input {
     display: block;
     position: relative;
     width: 50%;
@@ -96,13 +109,15 @@ form {
     padding-right: 15px;
     padding-left: 15px;
 }
-.input label{
+
+.input label {
     display: inline-block;
     max-width: 100%;
     margin-bottom: 5px;
     font-weight: bold;
 }
-.input input{
+
+.input input {
     display: block;
     width: 100%;
     color: white;
@@ -111,12 +126,12 @@ form {
     padding: 6px 12px;
     font-size: 14px;
     border: 1px solid rgb(196, 255, 128);
-    border:none;
-    outline:none;
+    border: none;
+    outline: none;
     border-bottom: 1px solid white;
 }
 
-.btn1{
+.btn1 {
     margin-top: 30px;
     background: none;
     border: 3px solid #fff;
@@ -129,23 +144,66 @@ form {
     transition: all 0.1s ease-in-out 0s;
     font-size: 25px;
 }
-.btn1:hover{
+
+.btn1:hover {
     background: #FFF;
     color: #000;
 }
-.btn1:focus{
+
+.btn1:focus {
     outline: none;
     transform: scale(0.97);
 }
-.input p{
+
+.input p {
     visibility: hidden;
 }
-footer{
-    margin: auto;
-    width: 40%;
+
+footer {
+    position: relative;
+    left: 0;
+    top:100%;
+    width: 100%;
+    padding: 25px;
+    background-color: #1e272e;
+    opacity: 0.9;
+    color: white;
     text-align: center;
-    display: flex;
-    justify-content: space-around;
-    font-size: 15px;
     margin-top: 100px;
+}
+
+.message {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.message label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.message textarea {
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    height: 190px;
+    color: black;
+    background-color: whitesmoke;
+    margin-top: 10px;
+    padding: 6px 12px;
+    font-size: 14px;
+    border: 1px solid rgb(196, 255, 128);
+    border-bottom: 1px solid white;
+    opacity: 0.9;
+    border-radius: 2px;
+}
+
+.menu {
+    cursor: pointer;
 }

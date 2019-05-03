@@ -3,7 +3,8 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>Page Title</title>
+    <title>La Renardière</title>
+    <link rel="icon" type="image/png" href="img/renardiere.png" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="script.js"></script>
 </head>
@@ -11,13 +12,13 @@
 <body>
     <div class="background"></div>
     <header>
-        <h1>La Renardière</h1>
+        <h1 class="menu" onclick="test()">La Renardière</h1>
         <nav>
             <ul>
-                <li id="accueil" onclick="test()">Accueil</li>
-                <li id="inscription" onclick="test2()">Inscription</li>
-                <li id="parcours" onclick="test3()">Parcours</li>
-                <li id="contact" onclick="test4()">Contact</li>
+                <li class="menu" id="accueil" onclick="test()">Accueil</li>
+                <li class="menu" id="inscription" onclick="test2()">Inscription</li>
+                <li class="menu" id="parcours" onclick="test3()">Parcours</li>
+                <li class="menu" id="contact" onclick="test4()">Contact</li>
             </ul>
         </nav>
     </header>
@@ -64,7 +65,7 @@
                 <p>Lorem ipsum adipisicing elit.</p>
             </div>
             <div class="input">
-                <label for="email">Couriel</label>
+                <label for="email">Courriel</label>
                 <input type="email" name="email" required placeholder="xyz@mail.com">
                 <p>Lorem ipsum adipisicing elit.</p>
             </div>
@@ -83,16 +84,57 @@
     <section id="result">
 
     </section>
-    <section id="formContact">
-        <form action="">
-            <div><label for=""><input type="text" name="name">Nom</label></div>
-            <div><label for=""><input type="text" name="firstname">Prénom</label></div>
-            <div><label for=""><input type="text" name="email2">Courriel</label></div>
-            <div><label for=""><input type="text" name="phone">Télephone</label></div>
-            <div><label for=""><input type="text"></label></div>
+
+    <section id="formContact" class="section">
+        <form action="" method="">
+            <div class="input">
+                <label for="nom">Nom</label>
+                <input type="text" name="nom" required placeholder="Nom">
+                <p>Lorem ipsum adipisicing elit.</p>
+            </div>
+            <div class="input">
+                <label for="prenom">Prénom</label>
+                <input type="text" name="prenom" required placeholder="Prénom">
+                <p>Lorem ipsum adipisicing elit.</p>
+            </div>
+            <div class="input">
+                <label for="adresse">Adresse</label>
+                <input type="text" name="adresse" required placeholder="Adresse">
+                <p>Lorem ipsum adipisicing elit.</p>
+            </div>
+            <div class="input">
+                <label for="code_postal">Code Postal</label>
+                <input type="text" name="code_postal" required placeholder="Code Postal">
+                <p>Lorem ipsum adipisicing elit.</p>
+            </div>
+            <div class="input">
+                <label for="ville">Ville</label>
+                <input type="text" name="ville" required placeholder="Ville">
+                <p>Lorem ipsum adipisicing elit.</p>
+            </div>
+            <div class="input">
+                <label for="date_naissance">Date de Naissance</label>
+                <input type="date" name="date_naissance" data-role="datepicker" required value=>
+                <p>Lorem ipsum adipisicing elit.</p>
+            </div>
+            <div class="input">
+                <label for="telephone">Téléphone</label>
+                <input type="tel" name="telephone" required placeholder="+33">
+                <p>Lorem ipsum adipisicing elit.</p>
+            </div>
+            <div class="input">
+                <label for="email">Courriel</label>
+                <input type="email" name="email" required placeholder="xyz@mail.com">
+                <p>Lorem ipsum adipisicing elit.</p>
+            </div>
+            <div class="message">
+                <label for="message">Message</label>
+                <textarea type="text" placeholder="Ecrivez votre message ici."></textarea>
+            </div>
+            <input class="btn1" type="submit" value="Envoyer" name="submit">
         </form>
     </section>
-    <footer>
+    <footer id="footer">
         <p>La Renardière</p>
         <p>2018</p>
         <p></p>
