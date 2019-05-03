@@ -58,7 +58,7 @@ header nav ul li {
 }
 
 section {
-    display: none;
+    display: block;
     height: max-content;
     width: 50%;
     margin: auto;
@@ -162,7 +162,7 @@ input {
 footer {
     position: relative;
     left: 0;
-    top:100%;
+    top: 100%;
     width: 100%;
     padding: 25px;
     background-color: #1e272e;
@@ -171,6 +171,7 @@ footer {
     text-align: center;
     margin-top: 100px;
 }
+
 
 .message {
     display: block;
@@ -206,4 +207,21 @@ footer {
 
 .menu {
     cursor: pointer;
+}
+
+.image {
+    margin: 15px;
+    width: 30%;
+    height: auto;
+    transition: all 0.1s ease-in-out 0s;
+}
+
+.image:hover {
+    transform: scale(1.05);
+}
+
+.bloc-image {
+    position: relative;
+    margin-top: 100px;
+    text-align: center;
 }

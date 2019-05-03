@@ -2,40 +2,39 @@
 test.addEventListener('click',()=>{
 document.getElementById('inscription').style.display="block";
 })*/
+var accueil = document.getElementById('accueil');
+var inscription = document.getElementById('inscription');
+var parcours = document.getElementById('parcours');
+var contact = document.getElementById('contact');
+var titre = document.getElementById('titre');
+var footer = document.getElementById('footer');
 
-//acceuil
-function test(){
-  document.getElementById('formInscription').style.display="none";
-  document.getElementById('result').style.display="none";
-  document.getElementById('formContact').style.display="none";
-  document.getElementById('home').style.display="block";
-  document.getElementById('footer').style.top='100%';
-}
+window.onload = () => {
 
-//inscription
-function test2() {
-  document.getElementById('home').style.display="none";
-  document.getElementById('result').style.display="none";
-  document.getElementById('formContact').style.display="none";
-  document.getElementById('formInscription').style.display="block";
-  document.getElementById('footer').style.top='0';
-  
-}
+  accueil.onclick = () => {
+    document.location = 'index.html';
+    footer.style.top = '100%';
+  };
 
-//parcours
-function test3(){
-  document.getElementById('home').style.display="none";
-  document.getElementById('formInscription').style.display="none";
-  document.getElementById('formContact').style.display="none";
-  document.getElementById('result').style.display="block";
-  document.getElementById('footer').style.top='100%';
-}
+  contact.onclick = () => {
+    document.location = 'contact.html';
+    footer.style.top = '0';
+  };
 
-//contact
-function test4(){
-  document.getElementById('home').style.display="none";
-  document.getElementById('formInscription').style.display="none";
-  document.getElementById('result').style.display="none";
-  document.getElementById('formContact').style.display="block";
-  document.getElementById('footer').style.top='0';
-}
+  inscription.onclick = () => {
+    document.location = 'inscription.html';
+    footer.style.top = '0';
+    
+    
+  };
+
+  parcours.onclick = () => {
+    document.location = 'parcours.html';
+    footer.style.top = '0%';
+  };
+
+  titre.onclick = () => {
+    document.location = 'index.html';
+    footer.style.top = '100%';
+  };
+};
