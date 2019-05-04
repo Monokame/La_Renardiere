@@ -5,46 +5,70 @@ var contact = document.getElementById('contact');
 var titre = document.getElementById('titre');
 var footer = document.getElementById('footer');
 var img = document.getElementsByClassName('image');
+var suivant = document.getElementById('suivant');
 
 window.onload = () => {
-
   accueil.onclick = () => {
-    document.location = 'index.html';
+    document.getElementById('formInscription').style.display = "none";
+    document.getElementById('result').style.display = "none";
+    document.getElementById('formContact').style.display = "none";
+    document.getElementById('home').style.display = "block";
+    document.getElementById('parcours-image').style.display = "none";
   };
 
   contact.onclick = () => {
-    document.location = 'contact.html';
+    document.getElementById('home').style.display = "none";
+    document.getElementById('formInscription').style.display = "none";
+    document.getElementById('result').style.display = "none";
+    document.getElementById('formContact').style.display = "block";
+    document.getElementById('parcours-image').style.display = "none";
   };
 
   inscription.onclick = () => {
-    document.location = 'inscription.html';
+    document.getElementById('home').style.display = "none";
+    document.getElementById('result').style.display = "none";
+    document.getElementById('formContact').style.display = "none";
+    document.getElementById('formInscription').style.display = "none";
+    document.getElementById('parcours-image').style.display = "block";
   };
 
   parcours.onclick = () => {
-    document.location = 'parcours.html';
+    document.getElementById('home').style.display = "none";
+    document.getElementById('formInscription').style.display = "none";
+    document.getElementById('formContact').style.display = "none";
+    document.getElementById('result').style.display = "block";
+    document.getElementById('parcours-image').style.display = "none";
   };
 
   titre.onclick = () => {
-    document.location = 'index.html';
+    document.getElementById('formInscription').style.display = "none";
+    document.getElementById('result').style.display = "none";
+    document.getElementById('formContact').style.display = "none";
+    document.getElementById('home').style.display = "block";
+    document.getElementById('parcours-image').style.display = "none";
   };
+
+  suivant.onclick = () =>{
+    document.getElementById('home').style.display = "none";
+    document.getElementById('formInscription').style.display = "block";
+    document.getElementById('formContact').style.display = "none";
+    document.getElementById('result').style.display = "none";
+    document.getElementById('parcours-image').style.display = "none";
+  }
 };
-
-var tab = new Array();
-
 
 for (let i = 0; i < img.length; i++) {
   img[i].onmouseover = () => {
-    
+
     imageMouseOn(img[i]);
   };
   img[i].onmouseout = () => {
     imageMouseOff(img[i]);
   };
-  img[i].onmousedown = () => {
-    let source = img[i].getAttribute('src');
-    imageCreation(source);
+  img[i].onclick = () => {
+    let num = i;
+    //img[i].style.border = 'solid 2px #48dbfb';
   };
-
 };
 
 function imageMouseOn(div) {
@@ -57,10 +81,3 @@ function imageMouseOff(div) {
   div.style.border = '';
 };
 
-function imageCreation(source) {
-  document.location = 'parcours-info.html';
-  let newImg = document.createElement('img');
-  newImg.src = 'img/test1.PNG';
-  newImg.className = 'image';
-  document.body.appendChild(newImg);
-};
