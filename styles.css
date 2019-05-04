@@ -161,8 +161,6 @@ input {
 
 footer {
     position: relative;
-    left: 0;
-    top: 100%;
     width: 100%;
     padding: 25px;
     background-color: #1e272e;
@@ -217,7 +215,8 @@ footer {
 }
 
 .image:hover {
-    transform: scale(1.05);
+    /*transform: scale(1.05);*/
+    cursor: pointer;
 }
 
 .bloc-image {
