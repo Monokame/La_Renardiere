@@ -178,12 +178,3 @@ footer{
     vertical-align: bottom;
     position: fixed;
 }
-footer{
-    margin: auto;
-    width: 40%;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    font-size: 15px;
-    margin-top: 100px;
-}
