@@ -1,7 +1,3 @@
-/*var test=document.getElementById('accueil');
-test.addEventListener('click',()=>{
-document.getElementById('inscription').style.display="block";
-})*/
 function test(){
   document.getElementById('formInscription').style.display="none";
   document.getElementById('result').style.display="none";
