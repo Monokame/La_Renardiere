@@ -52,8 +52,13 @@ header h1 img {
 
 header nav {
     float: right;
-    margin-top: 30px;
-    margin-right: 50px;
+    height: 100%;
+    vertical-align: middle;
+}
+
+header nav ul{
+    text a
+    height: 100%;
 }
 
 header nav ul li {
@@ -61,7 +66,15 @@ header nav ul li {
     margin-right: 20px;
     text-transform: uppercase;
     font-weight: bold;
+    height: 100%;
+    vertical-align: middle;
 }
+
+header nav ul li:hover{
+    opacity: .5;
+    background: #000;
+}
+
 
 section {
     display: none;
