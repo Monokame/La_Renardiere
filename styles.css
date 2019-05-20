@@ -45,34 +45,42 @@ header h1 {
 
 }
 header h1 img {
+    margin:5px 0px; ;
     vertical-align: middle;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
 }
 
 header nav {
     float: right;
     height: 100%;
-    vertical-align: middle;
-}
-
-header nav ul{
-    text a
-    height: 100%;
+    margin-right: 30px;
 }
 
 header nav ul li {
     display: inline-block;
-    margin-right: 20px;
+    padding: 0px 10px;
     text-transform: uppercase;
     font-weight: bold;
     height: 100%;
-    vertical-align: middle;
+    font-size: 18px;
+    line-height: 80px;
+    text-align: center;
+    border-left: 2px solid rgba(0, 0, 0, 0);
+    border-right: 2px solid rgba(0, 0, 0, 0);
+    transition-duration:0.5s; 
 }
 
 header nav ul li:hover{
-    opacity: .5;
-    background: #000;
+    background: rgba(0, 0, 0, 0.8);
+    border-left: 2px solid rgba(0, 0, 0, 0.8);
+    border-right: 2px solid rgba(0, 0, 0, 0.8);
+}
+
+header nav ul li:active{
+    background: rgba(0, 0, 0, 0.8);
+    border-left: 2px solid rgba(0, 0, 0, 0.8);
+    border-right: 2px solid rgba(0, 0, 0, 0.8);
 }
 
 
@@ -87,11 +95,12 @@ section {
     box-shadow: rgba(0, 0, 0, 0.8) 0em 0em 15px 15px;
     padding:20px;
     border-radius: 10px;
-    vertical-align: middle;
+    
 }
 
 section span{
-    color:rgb(255, 187, 0);
+    color:#ffbb00;
+    font-size: 20px;
 }
 
 form {
@@ -157,6 +166,7 @@ form {
     font-size: 14px;
     outline:none;
     border: 1px solid white;
+    resize: none;
 }
 
 .btn1{

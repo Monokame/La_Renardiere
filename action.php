@@ -14,6 +14,7 @@ if(isset($_POST)){
         ];
         $json = json_encode($array);
         $url = 'http://localhost:2901/Service1.svc/Insert';
+        echo require "index.html";
         echo $json;
         $opts = array('http' => array (
             'method'  => 'POST',
