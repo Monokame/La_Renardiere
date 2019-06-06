@@ -13,7 +13,7 @@
       $MESSAGE_BODY .= "Email: ".$_POST["email2"]." ";
       $MESSAGE_BODY .= "Comment: ".nl2br($_POST["message"])." ";
       mail($toEmail, $emailSubject, $MESSAGE_BODY, $mailheader);
-      echo require "index.html";
+      header('Location:index.html');
       echo('Coucou');
     } catch (\Throwable $th) {
       echo $th;
