@@ -1,5 +1,5 @@
-* {
-    margin: 0;
+* {/* Supprime la margin et le padding présent de base */
+    margin: 0; 
     padding: 0;
     color: white;
     font-family: helvetica;
@@ -20,12 +20,12 @@ body {
     -o-background-size: cover;
 }
 
-header {
+header { /*Bandeau du haut*/
     height: 80px;
     width: 100%;
 }
 
-header::before {
+header::before {/* créer un pseudo-élément enfant pour modifier l'esthétisme */
     background: url('img/background.jpg')center center fixed;
     background-color: #000000;
     background-size: cover;
@@ -77,13 +77,6 @@ header nav ul li:hover{
     border-left: 2px solid rgba(0, 0, 0, 0.8);
     border-right: 2px solid rgba(0, 0, 0, 0.8);
 }
-
-header nav ul li:active{
-    background: rgba(0, 0, 0, 0.8);
-    border-left: 2px solid rgba(0, 0, 0, 0.8);
-    border-right: 2px solid rgba(0, 0, 0, 0.8);
-}
-
 
 section {
     display: none;

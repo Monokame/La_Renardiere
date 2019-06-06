@@ -43,16 +43,16 @@ document.addEventListener('wheel', (e) => {
   }
   switch (itab) {
     case 0:
-      test();
+      blockHome();
       break;
     case 3:
-      test2();
+      blockInscription();
       break;
     case 7:
-      test3();
+      blockResult();
       break;
     case 11:
-      test4();
+      blockContact();
       break;
   }
 
