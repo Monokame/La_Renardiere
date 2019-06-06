@@ -139,6 +139,9 @@ form {
     outline:none;
     border-bottom: 1px solid white;
 }
+.input input:required{
+    box-shadow: none;
+}
 .input p{
     font-size: 15px;
     text-align: right;
@@ -201,4 +204,8 @@ footer{
     padding: 15px;
     vertical-align: bottom;
     position: fixed;
+}
+#result{
+    height: 500px;
+    overflow: auto;
 }
