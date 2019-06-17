@@ -1,4 +1,5 @@
 var itab = 0;
+var tabResult = document.getElementById('result');
 
 function blockHome() {
   document.getElementById('formInscription').style.display = "none";
@@ -19,6 +20,7 @@ function blockResult() {
   document.getElementById('formInscription').style.display = "none";
   document.getElementById('formContact').style.display = "none";
   document.getElementById('result').style.display = "block";
+  console.log(document.getElementById('formContact').focus())
 }
 
 function blockContact() {
@@ -27,12 +29,34 @@ function blockContact() {
   document.getElementById('result').style.display = "none";
   document.getElementById('formContact').style.display = "block";
 }
+
+var parents = document.getElementById("parent");
+var btns = parents.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var actif = document.getElementsByClassName("active");
+    actif[0].className = actif[0].className.replace(" active","");
+    this.className +=" active";
+  });
+}
+
+function hover() {
+  tabResult.addEventListener('mouseover',()=>{
+    console.log("azert")
+  })
+  return true
+}
+
 document.addEventListener('wheel', (e) => {
   if (e.deltaY > 0) {
     itab++;
-  } else if (e.deltaY < 0) {
+  }
+  else if (e.deltaY < 0) {
     itab--;
   }
+  // else if ((e.deltaY > 0) && (hover() === true) || (e.deltaY) < 0 && (hover() === true)){
+  //   console.log("test")
+  // }
 
   if (itab < 0) {
     itab = 0;
