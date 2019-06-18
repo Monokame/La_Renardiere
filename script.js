@@ -1,11 +1,16 @@
 var itab = 0;
-var tabResult = document.getElementById('result');
+var blockScroll = true;
+var valueScroll = document.getElementById("result");
+var parents = document.getElementById("parent");
+var btns = parents.getElementsByClassName("btn");
+var section = document.getElementById("result");
 
 function blockHome() {
   document.getElementById('formInscription').style.display = "none";
   document.getElementById('result').style.display = "none";
   document.getElementById('formContact').style.display = "none";
   document.getElementById('home').style.display = "block";
+  scroll(0);
 }
 
 function blockInscription() {
@@ -13,6 +18,7 @@ function blockInscription() {
   document.getElementById('result').style.display = "none";
   document.getElementById('formContact').style.display = "none";
   document.getElementById('formInscription').style.display = "block";
+  scroll(1);
 }
 
 function blockResult() {
@@ -20,7 +26,7 @@ function blockResult() {
   document.getElementById('formInscription').style.display = "none";
   document.getElementById('formContact').style.display = "none";
   document.getElementById('result').style.display = "block";
-  console.log(document.getElementById('formContact').focus())
+  scroll(2);
 }
 
 function blockContact() {
@@ -28,35 +34,31 @@ function blockContact() {
   document.getElementById('formInscription').style.display = "none";
   document.getElementById('result').style.display = "none";
   document.getElementById('formContact').style.display = "block";
+  scroll(3);
 }
 
-var parents = document.getElementById("parent");
-var btns = parents.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var actif = document.getElementsByClassName("active");
-    actif[0].className = actif[0].className.replace(" active","");
-    this.className +=" active";
-  });
+function scroll(index) {
+  for (let i = 0; i < btns.length; i++) {
+    if (i == index)
+      btns[i].className = "btn active";
+    else
+      btns[i].className = "btn"
+  }
 }
 
-function hover() {
-  tabResult.addEventListener('mouseover',()=>{
-    console.log("azert")
-  })
-  return true
-}
+section.addEventListener('wheel',()=>{
+  blockScroll = false;
+});
 
 document.addEventListener('wheel', (e) => {
-  if (e.deltaY > 0) {
-    itab++;
-  }
-  else if (e.deltaY < 0) {
-    itab--;
-  }
-  // else if ((e.deltaY > 0) && (hover() === true) || (e.deltaY) < 0 && (hover() === true)){
-  //   console.log("test")
-  // }
+
+  if (blockScroll)
+    if (e.deltaY > 0) {
+      itab++;
+    }
+    else if (e.deltaY < 0) {
+      itab--;
+    }
 
   if (itab < 0) {
     itab = 0;
@@ -79,5 +81,5 @@ document.addEventListener('wheel', (e) => {
       blockContact();
       break;
   }
-
+blockScroll=true;
 })

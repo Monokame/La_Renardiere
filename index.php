@@ -20,7 +20,7 @@
             </nav>
         </header>
         <section id="home" style="display: block;">
-                <h1>Accueil</h1>
+                <h1>Accueil</h1><br>
             </section>
             <section id="formInscription">
                 <h1>Inscription</h1><br>
@@ -36,6 +36,16 @@
                         <p>Les informations entrées sont incorrectes.</p>
                     </div>
                     <div class="input">
+                        <label for="date_naissance">Date de Naissance <span>*</span></label>
+                        <input type="date" name="date_naissance" data-role="datepicker" required value=>
+                        <p>Les informations entrées sont incorrectes.</p>
+                    </div>
+                    <div class="input">
+                        <label for="telephone">Téléphone <span>*</span></label>
+                        <input type="tel" name="telephone" required placeholder="+33">
+                        <p>Les informations entrées sont incorrectes.</p>
+                    </div>
+                    <div class="input large">
                         <label for="adresse">Adresse <span>*</span></label>
                         <input type="text" name="adresse" required placeholder="Adresse">
                         <p>Les informations entrées sont incorrectes.</p>
@@ -51,18 +61,18 @@
                         <p>Les informations entrées sont incorrectes.</p>
                     </div>
                     <div class="input">
-                        <label for="date_naissance">Date de Naissance <span>*</span></label>
-                        <input type="date" name="date_naissance" data-role="datepicker" required value=>
-                        <p>Les informations entrées sont incorrectes.</p>
-                    </div>
-                    <div class="input">
-                        <label for="telephone">Téléphone <span>*</span></label>
-                        <input type="tel" name="telephone" required placeholder="+33">
-                        <p>Les informations entrées sont incorrectes.</p>
-                    </div>
-                    <div class="input">
                         <label for="email">Courriel <span>*</span></label>
                         <input type="email" name="email" required placeholder="xyz@mail.com">
+                        <p>Les informations entrées sont incorrectes.</p>
+                    </div>
+                    <div class="input">
+                        <label for="parcours">Parcours <span>*</span></label>
+                        <select name="parcours">
+                            <option value="1">Parcours - 1 - 18 km</option>
+                            <option value="2">Parcours - 2 - 28 km</option>
+                            <option value="3">Parcours - 3 - 38 km</option>
+                            <option value="4">Parcours - 4 - 58 km</option>
+                        </select>
                         <p>Les informations entrées sont incorrectes.</p>
                     </div>
                     <div class="input">
@@ -79,15 +89,18 @@
                 <p><span>*</span> Ces informations sont obligatoires</p>
             </section>
             <section id="result">
-                <h1>Classement</h1>
+                <h1>Classement</h1><br>
                 <table>
+                <thead>
                     <tr>
-                        <td>Nom</td>
-                        <td>Prenom</td>
-                        <td>Temps</td>
-                        <td>Checkpoint</td>
-                        <td>Club</td>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Temps</th>
+                        <th>Checkpoint</th>
+                        <th>Club</th>
                     </tr>
+                    </thead>
+                    <tbody>
                     <?php
         $url = 'http://localhost/Service1.svc/SelectAffichage';
         $data = file_get_contents($url);
@@ -102,6 +115,7 @@
             echo "</tr>";
         }
                     ?>
+                    </tbody>
         </table>
     </section>
     <section id="formContact">

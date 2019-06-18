@@ -12,11 +12,11 @@ if(isset($_POST)){
             "Email" => $_POST['email'],
             "Club" => $_POST['club'],
             "Ufolep" => $_POST['ufolep'],
-            "Parcours"=> "1"
+            "Parcours"=> $_POST['parcours']
         ];
-        $json = json_encode($array); 
+        $json = json_encode($array);
         // Créer le json à partir du tableau
-        $url = 'http://localhost/Service1.svc/Insert';
+        $url = 'http://10.3.84.152/Service1.svc/Insert';
         $opts = array('http' => array (
             'method'  => 'POST',
             'header'  => 'Content-type: application/json',
@@ -26,7 +26,7 @@ if(isset($_POST)){
         $context = stream_context_create($opts);//crée un contexte de flux
         $result = file_get_contents($url, false, $context);
         //ouvre le fichier pour y écrire le contexte (en l'occurrence l'url)
-        header('Location:index.html');//affiche la page index.html
+        header('Location:index.php');//affiche la page index.html
         // echo $json;
     }
 ?>

@@ -96,7 +96,12 @@ section {
     box-shadow: rgba(0, 0, 0, 0.8) 0em 0em 15px 15px;
     padding:20px;
     border-radius: 10px;
-
+}
+section::-webkit-scrollbar{
+    background-color: #191919;
+}
+section::-webkit-scrollbar-thumb{
+  background-color: rgb(48, 48, 48);
 }
 
 section span{
@@ -120,6 +125,9 @@ form {
     padding-right: 15px;
     padding-left: 15px;
 }
+.large{
+    width: 100%;
+}
 
 .input label{
     display: inline-block;
@@ -127,7 +135,7 @@ form {
     margin-bottom: 5px;
     font-weight: bold;
 }
-.input input{
+.input input,.input select{
     display: block;
     width: 100%;
     color: white;
@@ -149,6 +157,29 @@ form {
     color: rgb(255, 57, 57);
     font-style: italic;
 }
+
+option{
+    color:black;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table th{
+    padding: 10px 0px 10px 0px;
+}
+table tr{
+    display: table-row;
+    border: 1px solid white;
+}
+table td{
+    padding: 2px;
+}
+
 .text {
     margin-top: 15px;
     display: block;
