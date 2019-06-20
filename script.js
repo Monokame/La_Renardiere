@@ -5,36 +5,13 @@ var parents = document.getElementById("parent");
 var btns = parents.getElementsByClassName("btn");
 var section = document.getElementById("result");
 
-function blockHome() {
-  document.getElementById('formInscription').style.display = "none";
-  document.getElementById('result').style.display = "none";
-  document.getElementById('formContact').style.display = "none";
-  document.getElementById('home').style.display = "block";
-  scroll(0);
-}
-
-function blockInscription() {
-  document.getElementById('home').style.display = "none";
-  document.getElementById('result').style.display = "none";
-  document.getElementById('formContact').style.display = "none";
-  document.getElementById('formInscription').style.display = "block";
-  scroll(1);
-}
-
-function blockResult() {
-  document.getElementById('home').style.display = "none";
-  document.getElementById('formInscription').style.display = "none";
-  document.getElementById('formContact').style.display = "none";
-  document.getElementById('result').style.display = "block";
-  scroll(2);
-}
-
-function blockContact() {
-  document.getElementById('home').style.display = "none";
-  document.getElementById('formInscription').style.display = "none";
-  document.getElementById('result').style.display = "none";
-  document.getElementById('formContact').style.display = "block";
-  scroll(3);
+function blockSection(block, none1,none2,none3,id,itabValue) {
+  document.getElementById(none1).style.display = "none";
+  document.getElementById(none2).style.display = "none";
+  document.getElementById(none3).style.display = "none";
+  document.getElementById(block).style.display = "block";
+  scroll(id);
+  itab= itabValue;
 }
 
 function scroll(index) {
@@ -69,16 +46,16 @@ document.addEventListener('wheel', (e) => {
   }
   switch (itab) {
     case 0:
-      blockHome();
+      blockSection('home', 'formInscription', 'result', 'formContact', 0, 0);
       break;
     case 3:
-      blockInscription();
+      blockSection('formInscription', 'home', 'result', 'formContact', 1, 3);
       break;
     case 7:
-      blockResult();
+      blockSection('result', 'home', 'formInscription', 'formContact', 2, 7);
       break;
     case 11:
-      blockContact();
+      blockSection('formContact', 'home', 'result', 'formInscription', 3, 11);
       break;
   }
 blockScroll=true;
