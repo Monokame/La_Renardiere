@@ -5,6 +5,7 @@
         <title>La Renardière</title>
         <link rel="stylesheet" type="text/css" href="styles.css" />
         <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
         <div class="background"></div>
@@ -12,10 +13,10 @@
             <a href="index.php"><h1>La <img src="img/logo.png" alt="Logo de la Renardière"> Renardière</h1></a>
             <nav>
                 <ul id="parent">
-                    <li id="accueil" class="btn active" onclick="blockSection('home', 'formInscription','result','formContact',0,0)">Accueil</li>
-                    <li id="inscription" class="btn" onclick="blockSection('formInscription', 'home','result','formContact',1,3)">Inscription</li>
-                    <li id="classement" class="btn" onclick="blockSection('result', 'home','formInscription','formContact',2,7)">Classement</li>
-                    <li id="contact" class="btn" onclick="blockSection('formContact', 'home','result','formInscription',3,11)">Contact</li>
+                    <li id="accueil" class="btn active" onclick="test(0)">Accueil</li>
+                    <li id="inscription" class="btn" onclick="test(1)">Inscription</li>
+                    <li id="classement" class="btn" onclick="test(2)">Classement</li>
+                    <li id="contact" class="btn" onclick="test(3)">Contact</li>
                 </ul>
             </nav>
         </header>
@@ -42,7 +43,7 @@
                     </div>
                     <div class="input">
                         <label for="telephone">Téléphone <span>*</span></label>
-                        <input type="tel" name="telephone" required placeholder="+33">
+                        <input id="phone"type="tel" name="telephone" required placeholder="+33">
                         <p>Les informations entrées sont incorrectes.</p>
                     </div>
                     <div class="input large">
@@ -101,20 +102,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <?php
-        $url = 'http://10.3.84.152/Service1.svc/SelectAffichage';
-        $data = file_get_contents($url);
-        $arraylist = json_decode($data);
-        foreach ($arraylist as $list) {
-            echo "<tr>";
-            echo "<td> $list->nom</td>";
-            echo "<td> $list->prenom</td>";
-            echo "<td> $list->temps</td>";
-            echo "<td> $list->checkpoint/2</td>";
-            echo "<td> $list->club</td>";
-            echo "</tr>";
-        }
-                    ?>
+                    <?php include 'affichage.php'; ?>
                     </tbody>
         </table>
     </section>

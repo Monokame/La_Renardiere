@@ -4,15 +4,27 @@ var valueScroll = document.getElementById("result");
 var parents = document.getElementById("parent");
 var btns = parents.getElementsByClassName("btn");
 var section = document.getElementById("result");
+var sections = document.getElementsByTagName("section")
 
-function blockSection(block, none1,none2,none3,id,itabValue) {
-  document.getElementById(none1).style.display = "none";
-  document.getElementById(none2).style.display = "none";
-  document.getElementById(none3).style.display = "none";
-  document.getElementById(block).style.display = "block";
-  scroll(id);
-  itab= itabValue;
-}
+function test(param) { 
+  for (let i = 0; i < sections.length; i++) {
+    if(i==param){
+      sections[i].setAttribute("style","display: block;")
+      scroll(i);
+      itab = i*4;
+    }
+    else
+      sections[i].removeAttribute("style")
+  }
+ }
+
+$(function(){
+  $('#phone').bind('input', function () {
+    $(this).val(function(_, v){
+      return v.replace(/\s+/g, '');
+    });
+  });
+})
 
 function scroll(index) {
   for (let i = 0; i < btns.length; i++) {
@@ -36,26 +48,24 @@ document.addEventListener('wheel', (e) => {
     else if (e.deltaY < 0) {
       itab--;
     }
-
   if (itab < 0) {
     itab = 0;
   }
-
-  if (itab > 11) {
-    itab = 11;
+  if (itab > 12) {
+    itab = 12;
   }
   switch (itab) {
     case 0:
-      blockSection('home', 'formInscription', 'result', 'formContact', 0, 0);
+      test(0);
       break;
-    case 3:
-      blockSection('formInscription', 'home', 'result', 'formContact', 1, 3);
+    case 4:
+      test(1);
       break;
-    case 7:
-      blockSection('result', 'home', 'formInscription', 'formContact', 2, 7);
+    case 8:
+      test(2);
       break;
-    case 11:
-      blockSection('formContact', 'home', 'result', 'formInscription', 3, 11);
+    case 12:
+      test(3);
       break;
   }
 blockScroll=true;
