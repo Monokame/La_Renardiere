@@ -1,5 +1,5 @@
 <?php
-        $url = 'http://localhost/Service1.svc/SelectAffichage';
+        $url = 'http://10.3.84.152/Service1.svc/SelectAffichage';
         $data = file_get_contents($url);
         $arraylist = json_decode($data);
         foreach ($arraylist as $list) {
