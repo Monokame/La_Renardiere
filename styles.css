@@ -304,8 +304,7 @@ footer {
     width: 100%
 }
 .casque{
-    width: 100%;
-    text-transform: capitalize;
+    text-transform: uppercase;
     text-align: center;
     text-decoration: underline;
 }
@@ -317,4 +316,9 @@ footer {
 div th, div td{
     border: 1px solid white;
 }
-
+.important{
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 18px;
+}

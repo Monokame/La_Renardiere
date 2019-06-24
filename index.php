@@ -274,9 +274,9 @@
         <p>Les enfants de moins de 14 ans devront être accompagnés par un adulte.</p>
         <p>Seuls les V.T.T. ou tandems sont acceptés. Les vélos devront être en parfait état de sécurité. Chaque participant se doit de respecter strictement le code de la route et les consignes ou injonctions des organisateurs. L’organisation ne pourra en aucun cas être tenue responsable de défaillance physique ou psychique, du dé-balisage par un tiers, d’un défaut de maîtrise de son VTT. Les organisateurs déclinent toute responsabilité en cas de vol de matériel et dégradations causées aux et par les participants.</p>
         <p class="important">L'organisation se réserve le droit, en cas de conditions météorologiques défavorables (vent >80km/h ou orage) de différer le départ, voire d'annuler la randonée ou de modifier les parcours.</p>
-        <p><b>RESPECTONS LA NATURE</b>: les participants ne doivent laisser aucun déchet après leur passage.</p>
         <p>Aucune inscription ne pourra être enregistrée sans paiement. L'organisation est couverte par une responsabilité civile obligatoire (notice disponible sur demande).</p>
-        <b class="casque">PORT DU CASQUE OBLIGATOIRE</b>
+        <p><b>RESPECTONS LA NATURE</b>: les participants ne doivent laisser aucun déchet après leur passage.</p>
+        <b class="casque">Port du casque obligatoire.</b>
     </section>
     <footer>
         <p>La Renardière - 2019</p>
