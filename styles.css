@@ -274,7 +274,9 @@ footer {
 .ici:hover{
     text-decoration: underline  
 }
-
+.regle p{
+    margin: 15px;
+}
 .accueil p{
     margin: 15px;
     float: left;
@@ -301,7 +303,12 @@ footer {
 .tarif{
     width: 100%
 }
-
+.casque{
+    width: 100%;
+    text-transform: capitalize;
+    text-align: center;
+    text-decoration: underline;
+}
 .autorisation,.encouragement {
     width: 100% !important;
     text-align: center;

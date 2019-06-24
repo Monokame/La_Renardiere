@@ -30,7 +30,7 @@
         <h2>Accueil</h2><br>
         <div class="width left">
         <p>Bienvenue sur le site de "La Renardière" une course organisée tous les ans par l'association sportive des <a href="http://lesrenardslyonsais.e-monsite.com/" target="blank">Renards Lyonsais</a>.</p>
-        <p>La course aura lieu le 11 mai 2020, et les inscriptions seront ouvertes jusqu'au Lundi 4 Avril 2020.</p>
+        <p>La course aura lieu le Dimanche 10 mai 2020, et les inscriptions seront ouvertes jusqu'au Lundi 4 Avril 2020.</p>
         <p>Le règlement de la course est dipsonible <a class="ici" onclick="test(6);">ICI</a>.</p>
         </div>
         <div class="width right">
@@ -63,9 +63,9 @@
             </table>
             <p class="tarif"><span>* </span>Tarifs:</p>
             <ul>
-                <li>-1€ pour licenciés UFOLEP</li>
-                <li>-2€ pour les mineurs de moins de 12 ans</li>
-                <li>+2€ pour toutes inscriptions sur place</li>
+                <li>-1€ pour les licenciés UFOLEP.</li>
+                <li>-2€ pour les mineurs de moins de 12 ans.</li>
+                <li>+2€ pour toutes inscriptions sur place.</li>
             </ul>
         </div>
     </section>
@@ -123,7 +123,7 @@
                 <input type="text" name="ufolep" placeholder="Ufolep">
             </div>
             <input type="checkbox" name="reglement" required>
-            <label for="reglement">Je confirme avoir pris connaissance du règlement.</label>
+            <label for="reglement">Je confirme avoir pris connaissance du <a class="ici" onclick="test(6);">règlement</a>.</label>
             <input class="btn1" type="submit" value="Envoyer" name="submit">
         </form>
         <br>
@@ -135,9 +135,9 @@
             <thead>
                 <tr>
                     <th>Nom</th>
-                    <th>Prenom</th>
+                    <th>Prénom</th>
                     <th>Temps</th>
-                    <th>Checkpoint</th>
+                    <th>Checkpoints</th>
                     <th>Club</th>
                 </tr>
             </thead>
@@ -268,15 +268,15 @@
             </ul>
         </div>
     </section>
-    <section>
+    <section class="regle">
         <h1>Le Règlement de la course</h1>
         <p>Ouvert aux licencié(e)s et non licencié(e)s.</p>
         <p>Les enfants de moins de 14 ans devront être accompagnés par un adulte.</p>
-        <p>Seuls les V.T.T. (tandems) sont acceptés. Les vélos devront être en parfait état de sécurité. Chaque participant se doit de respecter strictement le code de la route et les consignes ou injonctions des organisateurs. L’organisation ne pourra en aucun cas être tenue responsable de défaillance physique ou psychique, du dé-balisage par un tiers, d’un défaut de maîtrise de son VTT. Les organisateurs déclinent toute responsabilité en cas de vol de matériel et dégradations causées aux et par les participants.</p>
-        <p class="important">L'organisation se réserve le droit, en cas de conditions météorologiques défavorables (vent >80km/h ou orage) de différer le départ, voire d'annuler la rando ou de modifier les parcours.</p>
-        <p><div class="important">RESPECTONS LA NATURE :</div>les participants ne doivent laisser aucun déchet après leur passage.</p>
+        <p>Seuls les V.T.T. ou tandems sont acceptés. Les vélos devront être en parfait état de sécurité. Chaque participant se doit de respecter strictement le code de la route et les consignes ou injonctions des organisateurs. L’organisation ne pourra en aucun cas être tenue responsable de défaillance physique ou psychique, du dé-balisage par un tiers, d’un défaut de maîtrise de son VTT. Les organisateurs déclinent toute responsabilité en cas de vol de matériel et dégradations causées aux et par les participants.</p>
+        <p class="important">L'organisation se réserve le droit, en cas de conditions météorologiques défavorables (vent >80km/h ou orage) de différer le départ, voire d'annuler la randonée ou de modifier les parcours.</p>
+        <p><b>RESPECTONS LA NATURE</b>: les participants ne doivent laisser aucun déchet après leur passage.</p>
         <p>Aucune inscription ne pourra être enregistrée sans paiement. L'organisation est couverte par une responsabilité civile obligatoire (notice disponible sur demande).</p>
-        <b>PORT DU CASQUE OBLIGATOIRE</b>
+        <b class="casque">PORT DU CASQUE OBLIGATOIRE</b>
     </section>
     <footer>
         <p>La Renardière - 2019</p>
