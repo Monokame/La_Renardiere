@@ -1,4 +1,5 @@
-* {/* Supprime la margin et le padding présent de base */
+* {
+    /* Supprime la margin et le padding présent de base */
     margin: 0;
     padding: 0;
     color: white;
@@ -21,12 +22,14 @@ body {
     z-index: -1;
 }
 
-header { /*Bandeau du haut*/
+header {
+    /*Bandeau du haut*/
     height: 80px;
     width: 100%;
 }
 
-header::before {/* créer un pseudo-élément enfant pour modifier l'esthétisme */
+header::before {
+    /* créer un pseudo-élément enfant pour modifier l'esthétisme */
     background: url('img/background.jpg')center center fixed;
     background-color: #000000;
     background-size: cover;
@@ -36,7 +39,7 @@ header::before {/* créer un pseudo-élément enfant pour modifier l'esthétisme
     filter: blur(2px) brightness(0.7);
     position: absolute;
     z-index: -1;
-    left:0;
+    left: 0;
 }
 
 header h1 {
@@ -46,8 +49,10 @@ header h1 {
     height: 80px;
 
 }
+
 header h1 img {
-    margin:5px 0px; ;
+    margin: 5px 0px;
+    ;
     vertical-align: middle;
     width: 70px;
     height: 70px;
@@ -70,16 +75,16 @@ header nav ul li {
     text-align: center;
     border-left: 2px solid rgba(0, 0, 0, 0);
     border-right: 2px solid rgba(0, 0, 0, 0);
-    transition-duration:0.5s;
+    transition-duration: 0.5s;
 }
 
-header nav ul li:hover{
+header nav ul li:hover {
     background: rgba(0, 0, 0, 0.8);
     border-left: 2px solid rgba(0, 0, 0, 0.8);
     border-right: 2px solid rgba(0, 0, 0, 0.8);
 }
 
-.active{
+.active {
     background: rgba(0, 0, 0, 0.8);
     border-left: 2px solid rgba(0, 0, 0, 0.8);
     border-right: 2px solid rgba(0, 0, 0, 0.8);
@@ -94,18 +99,20 @@ section {
     height: auto;
     background-color: rgba(0, 0, 0, 0.8);
     box-shadow: rgba(0, 0, 0, 0.8) 0em 0em 15px 15px;
-    padding:20px;
+    padding: 20px;
     border-radius: 10px;
 }
-section::-webkit-scrollbar{
+
+section::-webkit-scrollbar {
     background-color: #191919;
 }
-section::-webkit-scrollbar-thumb{
-  background-color: rgb(48, 48, 48);
+
+section::-webkit-scrollbar-thumb {
+    background-color: rgb(48, 48, 48);
 }
 
-section span{
-    color:#ffbb00;
+section span {
+    color: #ffbb00;
     font-size: 20px;
 }
 
@@ -116,7 +123,7 @@ form {
     display: block;
 }
 
-.input{
+.input {
     display: block;
     width: 50%;
     float: left;
@@ -125,17 +132,34 @@ form {
     padding-right: 15px;
     padding-left: 15px;
 }
-.large{
+
+@media only screen and (max-width: 939px) {
+    .input {
+        width: 100%
+    }
+
+    header nav {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    section {
+        margin-top: 120px;
+    }
+}
+
+.large {
     width: 100%;
 }
 
-.input label{
+.input label {
     display: inline-block;
     max-width: 100%;
     margin-bottom: 5px;
     font-weight: bold;
 }
-.input input,.input select{
+
+.input input,
+.input select {
     display: block;
     width: 100%;
     color: white;
@@ -143,14 +167,17 @@ form {
     height: 30px;
     padding: 6px 12px;
     font-size: 14px;
-    border:none;
-    outline:none;
+    border: none;
+    outline: none;
     border-bottom: 1px solid white;
+    margin-bottom: 15px;
 }
-.input input:required{
+
+.input input:required {
     box-shadow: none;
 }
-.input p{
+
+.input p {
     font-size: 15px;
     text-align: right;
     /* visibility: hidden; */
@@ -158,26 +185,28 @@ form {
     font-style: italic;
 }
 
-option{
-    color:black;
+option {
+    color: black;
     background: rgba(0, 0, 0, 0.5);
 }
 
-table{
+table {
     width: 100%;
     text-align: center;
     border-collapse: collapse;
 }
 
-table th{
+table th {
     padding: 10px 0px 10px 0px;
 }
-table tr{
+
+table tr {
     display: table-row;
     border: 1px solid white;
 }
-table td{
-    padding: 2px;
+
+table td {
+    padding: 5px;
 }
 
 .text {
@@ -190,7 +219,8 @@ table td{
     padding-right: 15px;
     padding-left: 15px;
 }
-.text textarea{
+
+.text textarea {
     margin-top: 15px;
     display: block;
     width: 100%;
@@ -199,12 +229,12 @@ table td{
     height: 150px;
     padding: 6px 12px;
     font-size: 14px;
-    outline:none;
+    outline: none;
     border: 1px solid white;
     resize: none;
 }
 
-.btn1{
+.btn1 {
     margin-top: 30px;
     background: none;
     border: 3px solid #fff;
@@ -217,16 +247,18 @@ table td{
     transition: all 0.1s ease-in-out 0s;
     font-size: 25px;
 }
-.btn1:hover{
+
+.btn1:hover {
     background: #FFF;
     color: #000;
 }
-.btn1:focus{
+
+.btn1:focus {
     outline: none;
     transform: scale(0.97);
 }
 
-footer{
+footer {
     width: 100%;
     text-align: center;
     bottom: 0;
@@ -236,7 +268,46 @@ footer{
     vertical-align: bottom;
     position: fixed;
 }
-#result{
+.ici{
+    cursor: pointer;
+}
+.ici:hover{
+    text-decoration: underline  
+}
+
+.accueil p{
+    margin: 15px;
+    float: left;
+}
+#result {
     height: 500px;
     overflow: auto;
 }
+
+.width{
+    width: 50%;
+}
+
+.right {
+    float: right;
+}
+.left{
+    float: left;
+}
+.fin p {
+    margin: 15px;
+    float: left;
+}
+.tarif{
+    width: 100%
+}
+
+.autorisation,.encouragement {
+    width: 100% !important;
+    text-align: center;
+    font-size: 1.2em;
+}
+div th, div td{
+    border: 1px solid white;
+}
+

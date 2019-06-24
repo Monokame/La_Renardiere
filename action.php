@@ -17,7 +17,7 @@ if(isset($_POST)){
 
         $json = json_encode($array);
         // Créer le json à partir du tableau
-        $url = 'http://10.3.84.152/Service1.svc/Insert';
+        $url = 'http://localhost/Service1.svc/Insert';
         $opts = array('http' => array (
             'method'  => 'POST',
             'header'  => 'Content-type: application/json',
